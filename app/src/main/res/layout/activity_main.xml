@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:columnWidth="300dp"
     android:horizontalSpacing="3dp"
-    android:numColumns="3"
+    android:numColumns="6"
     android:padding="@dimen/activity_horizontal_margin"
     android:scrollbars="none"
     android:transcriptMode="alwaysScroll"

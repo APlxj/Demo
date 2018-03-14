@@ -21,19 +21,20 @@
             </intent-filter>
         </activity>
 
-       <!-- <activity
-            android:name=".video.VideoActivity"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name1"
-            android:launchMode="singleInstance"
-            android:process=":process.sub">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <!-- <activity
+             android:name=".video.VideoActivity"
+             android:icon="@mipmap/ic_launcher"
+             android:label="@string/app_name1"
+             android:launchMode="singleInstance"
+             android:process=":process.sub">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>-->
-        <activity android:name=".video.VideoActivity"/>
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>-->
+        <activity android:name=".video.VideoActivity" />
+        <activity android:name=".ClockActivity" />
     </application>
 
 </manifest>
