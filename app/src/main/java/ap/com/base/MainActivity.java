@@ -1,4 +1,4 @@
-package ap.com;
+package ap.com.base;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,12 +8,8 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import ap.com.base.BaseActivity;
-import ap.com.base.SuperAdapter;
-import ap.com.video.VideoActivity;
+import ap.com.AddUtils;
+import ap.com.R;
 import butterknife.BindView;
 
 public class MainActivity extends BaseActivity {
@@ -26,15 +22,12 @@ public class MainActivity extends BaseActivity {
     public void onCreate() {
         adapter = new MyAdapter(this);
         mGridView.setAdapter(adapter);
-        adapter.putNewData(getList());
+        adapter.putNewData(AddUtils.getList());
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if ("video".equals(adapter.getData().get(i))) {
-                    showActivity(VideoActivity.class);
-                }else if ("clock".equals(adapter.getData().get(i))) {
-                    showActivity(ClockActivity.class);
-                }
+                if (AddUtils.map.containsKey(adapter.getData().get(i)))
+                    showActivity(AddUtils.map.get(adapter.getData().get(i)));
             }
         });
     }
@@ -42,16 +35,6 @@ public class MainActivity extends BaseActivity {
     @Override
     public int getLayout() {
         return R.layout.activity_main;
-    }
-
-    public List<String> getList() {
-        List<String> list = new ArrayList<>();
-        list.add("video");
-        list.add("image");
-        list.add("okhttp");
-        list.add("volley");
-        list.add("clock");
-        return list;
     }
 
     private class MyAdapter extends SuperAdapter<String> {

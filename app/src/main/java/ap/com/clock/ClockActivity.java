@@ -1,10 +1,11 @@
-package ap.com;
+package ap.com.clock;
 
 import android.os.SystemClock;
 import android.view.View;
 import android.widget.Chronometer;
 import android.widget.Toast;
 
+import ap.com.R;
 import ap.com.base.BaseActivity;
 
 /**

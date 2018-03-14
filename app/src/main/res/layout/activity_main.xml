@@ -11,5 +11,5 @@
     android:scrollbars="none"
     android:transcriptMode="alwaysScroll"
     android:verticalSpacing="3dp"
-    tools:context="ap.com.MainActivity" />
+    tools:context="ap.com.base.MainActivity" />
 
